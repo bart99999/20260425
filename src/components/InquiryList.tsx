@@ -231,12 +231,19 @@ const InquiryList: React.FC = () => {
                     onClick={() => setViewInquiry(item)}
                     className={`hover:bg-amber-50/30 cursor-pointer transition-colors ${selectedIds.includes(item.id as number) ? 'bg-amber-50/50' : ''}`}
                   >
-                    <td className="px-4 py-4 text-center">
+                    <td 
+                      className="px-4 py-4 text-center"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleSelectOne({ stopPropagation: () => {} } as any, item.id as number);
+                      }}
+                    >
                       <input 
                         type="checkbox" 
                         className="w-4 h-4 accent-amber-500 cursor-pointer rounded"
                         checked={selectedIds.includes(item.id as number)}
-                        onChange={(e) => handleSelectOne(e, item.id as number)}
+                        onChange={(e) => handleSelectOne(e as any, item.id as number)}
+                        onClick={(e) => e.stopPropagation()}
                       />
                     </td>
                     <td className="px-2 py-4 text-gray-500 truncate">
