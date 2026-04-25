@@ -7,7 +7,16 @@ function App() {
   const [activeTab, setActiveTab] = useState<'input' | 'list'>('input');
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans relative overflow-hidden">
+      {/* Background Starbi CI */}
+      <div 
+        className="fixed -bottom-20 -left-20 w-[450px] h-[450px] opacity-[0.07] pointer-events-none select-none z-0"
+        style={{
+          backgroundImage: 'url("/starbi.png")',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       {/* Header */}
       <header className="bg-[#FFCC00] shadow-sm sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
