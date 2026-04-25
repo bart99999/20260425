@@ -8,11 +8,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans relative overflow-hidden">
-      {/* Background KB CI Symbol */}
+      {/* Background Homer Simpson */}
       <div 
-        className="fixed -bottom-20 -right-20 w-[500px] h-[500px] opacity-[0.05] pointer-events-none select-none z-0"
+        className="fixed -bottom-10 -right-10 w-[300px] h-[400px] opacity-[0.15] pointer-events-none select-none z-0"
         style={{
-          backgroundImage: 'url("/kb_logo.png")',
+          backgroundImage: 'url("/homer.png")',
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
